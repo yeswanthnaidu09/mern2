@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="animation">
+      <img id="object" src="./train.png" />
+    </div>
+    <br />
+    <br />
+    <center>
+      <h1>Click the following buttons to handle animation</h1>
+      <button onclick="start()">Start</button>
+      &emsp;&emsp;&emsp;
+      <button onclick="stop()">Stop</button>
+    </center>
+
+    <script>
+      const element = document.getElementById("object");
+      let animationInterval = null;
+      let isAnimating = false;
+
+      function start() {
+        if (!isAnimating) {
+          element.style.animation = "myfirst 5s linear infinite";
+          isAnimating = true;
+        }
+      }
+
+      function stop() {
+        if (isAnimating) {
+          element.style.animation = "none";
+          isAnimating = false;
+        }
+      }
+    </script>
+  </body>
+
+  <style>
+    #object {
+      position: relative;
+      animation: none; /* Initialize with no animation */
+    }
+    @keyframes myfirst {
+      0% {
+        left: 0%;
+      }
+      100% {
+        left: 75%;
+      }
+    }
+    div {
+      background-color: #fafafa;
+    }
+    button {
+      width: 10%;
+      height: 7vh;
+    }
+    h1 {
+      color: blue;
+    }
+  </style>
+</html>

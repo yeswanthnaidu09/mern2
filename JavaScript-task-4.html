@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <button onclick="getdate1()">show date</button><br />
+        <div id="date"></div>
+        <br /><br />
+      </div>
+      <div>
+        <br />
+        <button onclick="getlocation1()">show Time</button>
+        <div id="loc"></div>
+      </div>
+    </div>
+    <script>
+      function getdate1() {
+        const date = new Date();
+        const mon = date.getMonth();
+        let f = "";
+        if (mon === 0) f = "January";
+        else if (mon === 1) f = "February";
+        else if (mon === 2) f = "March";
+        else if (mon === 3) f = "April";
+        else if (mon === 4) f = "May";
+        else if (mon === 5) f = "June";
+        else if (mon === 6) f = "July";
+        else if (mon === 7) f = "August";
+        else if (mon === 8) f = "September";
+        else if (mon === 9) f = "October";
+        else if (mon === 10) f = "November";
+        else f = "December";
+        const out = date.getDate() + "/" + f + "/" + date.getFullYear();
+        document.getElementById("date").innerHTML = out;
+      }
+      function getlocation1() {
+        const date1 = new Date();
+        const day = date1.getDay();
+        let ff;
+        if (day === 0) ff = "Sun";
+        else if (day === 1) ff = "Mon";
+        else if (day === 2) ff = "Tue";
+        else if (day === 3) ff = "Wed";
+        else if (day === 4) ff = "Thu";
+        else if (day === 5) ff = "Fri";
+        else ff = "Sat";
+
+        const mon = date1.getMonth();
+        let f = "";
+        if (mon === 0) f = "Jan";
+        else if (mon === 1) f = "Feb";
+        else if (mon === 2) f = "Mar";
+        else if (mon === 3) f = "Apr";
+        else if (mon === 4) f = "May";
+        else if (mon === 5) f = "Jun";
+        else if (mon === 6) f = "Jul";
+        else if (mon === 7) f = "Aug";
+        else if (mon === 8) f = "Sep";
+        else if (mon === 9) f = "Oct";
+        else if (mon === 10) f = "Nov";
+        else f = "Dec";
+        var hrs = parseInt(-new Date().getTimezoneOffset() / 60);
+        var hr = (-new Date().getTimezoneOffset() / 60 - hrs) * 60;
+        var h = hrs + "" + hr;
+        if (h == "530") h = "(Indian Standard Time)";
+        const out1 =
+          ff +
+          " " +
+          f +
+          " " +
+          date1.getDate() +
+          " " +
+          date1.getFullYear() +
+          " " +
+          date1.getHours() +
+          ":" +
+          date1.getMinutes() +
+          ":" +
+          date1.getSeconds() +
+          " GMT+" +
+          hrs +
+          "" +
+          hr +
+          " " +
+          h;
+        document.getElementById("loc").innerHTML = out1;
+      }
+    </script>
+  </body>
+</html>

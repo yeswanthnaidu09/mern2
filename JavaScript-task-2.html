@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <form action="#">
+        <input type="text" id="num" />
+        <br />
+        <br />
+        <center><button onclick="order()">Done</button></center>
+        <br />
+        <div id="n1"></div>
+      </form>
+    </div>
+    <style>
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 90vh;
+      }
+    </style>
+    <script>
+      function order() {
+        let s = document.getElementById("num").value;
+        let b = "";
+        let a = [];
+        for (let i = 0; i < s.length; i++) {
+          a[i] = s.charCodeAt(i);
+        }
+        for (let i = 0; i < s.length; i++) {
+          for (let j = 0; j < s.length; j++) {
+            if (a[i] < a[j]) {
+              let b = a[i];
+              a[i] = a[j];
+              a[j] = b;
+            }
+          }
+        }
+        for (let i = 0; i < s.length; i++) {
+          b = b + String.fromCharCode(a[i]);
+        }
+        document.getElementById("n1").innerHTML = b;
+      }
+    </script>
+  </body>
+</html>

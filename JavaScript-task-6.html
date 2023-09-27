@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <form name="mytable" onsubmit="return validate()" action="#">
+        <div class="main-content">
+          <div class="logo1">
+            <img
+              class="logo"
+              src="https://i.pinimg.com/564x/35/21/d0/3521d0b5d75207b9ad525a90288bb7c7.jpg"
+            />
+            <div class="header">
+              <img
+                src="https://seeklogo.com/images/I/instagram-logo-468E0CC266-seeklogo.com.png"
+              />
+            </div>
+          </div>
+          <div class="l-part">
+            <div class="f1">
+              <i
+                class="fa-solid fa-user fa-lg"
+                style="position: absolute; margin-left: 0.5%"
+              ></i>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Username"
+                class="input-1 in-1"
+              />
+            </div>
+            <div class="f2" id="f1"></div>
+            <div class="overlap-text">
+              <div class="f1">
+                <i
+                  class="fa fa-key fa-lg"
+                  style="position: absolute; margin-left: 3%"
+                  aria-hidden="true"
+                ></i>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  class="input-2"
+                />
+              </div>
+              <div id="f2"></div>
+            </div>
+            <button type="submit" class="btn">Login</button>
+          </div>
+          <br />
+          <div
+            class="flex"
+            style="
+              font-family: Helvetica, Arial, sans-serif;
+              display: flex;
+              justify-content: space-between;
+            "
+          >
+            <div style="font-size: 14px">
+              <input type="checkbox" />&nbsp;Remember me
+              <div class="grey"></div>
+            </div>
+            <div>
+              <a style="font-size: 14px" href="#">Forgot Password?</a>
+              <div class="grey1"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="sub-content">
+        <div class="s-part">
+          Don't have an account! <a href="#">Sign up here</a>
+        </div>
+      </div>
+    </div>
+
+    <style>
+            * {
+              margin: 0px;
+              padding: 0px;
+            }
+            i{
+              margin-top:15px;
+            }
+            body {
+              background-color: #eee;
+            }
+            .logo1 {
+              display: flex;
+            }
+            .f1{
+              display:flex;
+            }
+            .logo {
+              width: 100px;
+              height: 100px;
+              margin-left: -10%;
+            }
+            #wrapper {
+              width: 500px;
+              height: 50%;
+              overflow: hidden;
+              border: 0px solid #000;
+              margin: 50px auto;
+              padding: 10px;
+            }
+
+            .main-content {
+              width: 250px;
+              height: 40%;
+              margin: 10px auto;
+              background-color: #fff;
+              border: 2px solid #e6e6e6;
+              padding: 40px 50px;
+            }
+
+            .header {
+              border: 0px solid #000;
+              margin-bottom: 5px;
+            }
+            input {
+              border: 4px solid lightgray;
+            }
+            .header img {
+              height: 50px;
+              width: 175px;
+              margin-top: 20%;
+              position: relative;
+            }
+
+            .input-1,
+            .input-2 {
+              width: 100%;
+              margin-bottom: 15px;
+              padding: 8px 12px;
+              border: 1px solid #dbdbdb;
+              box-sizing: border-box;
+              border-radius: 3px;
+              text-align: center;
+            }
+            a {
+              text-decoration: none;
+              color: #3897f0;
+            }
+            .overlap-text {
+              position: relative;
+            }
+            .grey {
+              /* width: 40px;
+              height: 31.1px;
+              margin-top: -151%;
+              margin-left: 1%;
+              z-index: 1;
+              position: relative;
+              background-color: #e8ecef;
+      /*
+              background: transparent url(./1.png);
+              background-position-x: 40%;
+              background-size: 30px;
+              position: relative;
+              z-index: 2;
+              background-repeat: no-repeat; */ */
+            }
+            input {
+              background-color: #f0f0f0; /* Set the background color */
+              border: 1px solid black; /* Add a border for better visibility */
+            }
+            .grey1 {
+              /* width: 40px;
+              height: 31.5px;
+              margin-top: -105.5%;
+              margin-left: -119.5%;
+              border-top-left-radius: 3px;
+              position: relative;
+
+              background-color: #e8ecef;
+              background: transparent
+                url("https://cdn-icons-png.flaticon.com/512/2889/2889676.png");
+              background-position-x: 40%;
+              background-size: 30px;
+              position: relative;
+              z-index: 2;
+              background-repeat: no-repeat; */
+            }
+            .overlap-text a {
+              position: absolute;
+              top: 8px;
+              right: 10px;
+              color: #003569;
+              font-size: 14px;
+              text-decoration: none;
+              font-family: "Overpass Mono", monospace;
+              letter-spacing: -1px;
+            }
+
+            .btn {
+              width: 100%;
+              background-color: #3897f0;
+              border: 1px solid #3897f0;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              font-size: 15px;
+              color: #fff;
+              font-weight: bold;
+              height: 35px;
+              cursor: pointer;
+              border-radius: 3px;
+            }
+
+            .sub-content {
+              width: 300px;
+              height: 40%;
+              margin: 10px auto;
+              padding: 10px 0px;
+              font-family: Helvetica, Arial, sans-serif;
+            }
+
+            .s-part {
+              text-align: center;
+              font-family: Helvetica, Arial, sans-serif;
+              font-size: 14px;
+            }
+
+            .s-part a {
+              text-decoration: none;
+              font-family: Helvetica, Arial, sans-serif;
+              cursor: pointer;
+              color: #3897f0;
+              font-size: 14px;
+            }
+    </style>
+
+    <script>
+      function validate() {
+        let a = document.forms["mytable"]["username"].value;
+        if (a == "") {
+          var element = document.getElementById("username");
+          element.style.borderWidth = "2px";
+          element.style.borderColor = "red";
+          element.style.borderStyle = "solid";
+          alert("Username is required");
+          // error = "&emsp;This field is required";
+          // document.getElementById("f1").innerHTML = error;
+        }
+        if (a != "") {
+          let b = document.forms["mytable"]["password"].value;
+          if (b == "") {
+            var element = document.getElementById("password");
+            element.style.borderWidth = "2px";
+            element.style.borderColor = "red";
+            element.style.borderStyle = "solid";
+            alert("Password is required");
+            // error = "&emsp;This field is required";
+            // document.getElementById("f2").innerHTML = error;
+          }
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/3759213e16.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

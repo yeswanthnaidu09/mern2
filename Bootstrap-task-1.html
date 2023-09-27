@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethnus Layout</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg special">
+      <div class="container-fluid special1">
+        <a class="navbar-brand text-black fs-4" href="#">Ethnus Layout</a>
+      </div>
+    </nav>
+
+    <nav class="navbar bg-dark py-0 special2" style="--bs-bg-opacity: 0.3">
+      <ul class="nav justify-content-center">
+        <li class="nav-item px-6">
+          <a class="nav-link" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item px-6">
+          <a class="nav-link" href="#">MENU</a>
+        </li>
+        <li class="nav-item px-6">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+        <li class="nav-item px-6">
+          <a class="nav-link" aria-disabled="true">CONTACT</a>
+        </li>
+      </ul>
+      <ul class="nav justify-content-center">
+        <li class="nav-item px-2">
+          <a class="nav-link" aria-current="page" href="#">SIGNUP</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#">LOGIN</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="left">
+        <center><p>Write your content here</p></center>
+      </div>
+      <div class="right">
+        <div>
+          <p>This is</p>
+        </div>
+        <div class="box"></div>
+      </div>
+    </div>
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .left,
+      .right {
+        text-align: center;
+        padding: 20px; /* Add padding for space around the text */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+      .left {
+        flex: 2;
+        color: black;
+      }
+      .right {
+        margin-right: -100px;
+      }
+      .box {
+        height: 85vh;
+        width: 40vh;
+        margin-top: -60px;
+        margin-right: -40px;
+        background-color: #636162;
+        z-index: -3;
+      }
+      .d-flex {
+        justify-content: space-between;
+      }
+      .special {
+        background-color: #0dcaf0;
+        padding: 0%;
+      }
+      .special1 {
+        width: auto;
+      }
+      .nav-link {
+        color: white;
+      }
+      .nav {
+        --bs-nav-link-padding-x: 3rem;
+      }
+      .special2 {
+        padding: ;
+      }
+    </style>
+  </body>
+</html>
